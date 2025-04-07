@@ -1,2 +1,26 @@
 @import "tailwindcss";
 
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    -webkit-font-smoothing: antialiased; /* Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale;  /* Firefox (Mac) */
+  }
+
+@layer base {
+    :root {
+      --primary-blue:  #013451;     
+      --light-blue:    #C4E3F7;   
+      --accent-yellow: #E89932;   
+      --dark-blue:     #011B2B;      
+      --muted-blue:    #3C6A89;    
+
+      --home-background: url('/src/assets/home-background.png');
+
+      --lexend-font: 'Lexend', sans-serif;
+    }
+    
+  }
