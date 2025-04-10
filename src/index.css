@@ -10,11 +10,12 @@ html {
   /* Chrome/Safari */
   -moz-osx-font-smoothing: grayscale;
   /* Firefox (Mac) */
+  overflow-x: hidden;
 }
 
 @layer base {
   :root {
-    --primary-blue: #013451;
+    --primary-blue: #013451;  
     --light-blue: #C4E3F7;
     --accent-yellow: #E89932;
     --dark-blue: #011B2B;

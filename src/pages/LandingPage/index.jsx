@@ -5,15 +5,14 @@ import MenuHamburguerImage from '../../assets/menu-hamburguer.png';
 import { useState } from 'react';
 
 
-
 export default function LandingPage() {
 
-  
+
   const [isOpen, setIsOpen] = useState(false);
 
 
   function changeMenuState() {
-      setIsOpen(!isOpen);
+    setIsOpen(!isOpen);
   }
 
   return (
@@ -24,11 +23,11 @@ export default function LandingPage() {
         </div>
 
         <div className={`w-2/3 bg-white h-screen fixed transition-all duration-200 ease-in-out translate-x-full  ${isOpen ? 'left-[-33%]' : 'left-full'}`}>
-        
+
         </div>
 
 
-        <div className='bg-[image:var(--home-background)] bg-cover bg-center h-screen'>
+        <section className='bg-[image:var(--home-background)] bg-cover bg-center h-screen'>
           <header className='w-screen h-1/6 flex items-center justify-between py-5 px-7 xl:px-16 2xl:px-24 3xl:px-32'>
             <img src={LogoAF} alt="Logo Alvany Figuereido na cor Branca" className='w-16 sm:w-24 2xl:w-28 3xl:w-32' />
 
@@ -45,13 +44,13 @@ export default function LandingPage() {
             </button>
 
             <div className='xl:hidden'>
-                <button onClick={changeMenuState}>
-                    <img src={MenuHamburguerImage} alt="Botão de Menu Hamburguer" className='w-8 sm:w-10' />
-                </button>
+              <button onClick={changeMenuState}>
+                <img src={MenuHamburguerImage} alt="Botão de Menu Hamburguer" className='w-8 sm:w-10' />
+              </button>
             </div>
           </header>
 
-          <section className='h-5/6 flex flex-col justify-center sm:items-start '>
+          <div className='h-5/6 flex flex-col justify-center sm:items-start '>
             <div className='text-white px-12 flex flex-col sm:px-16 md:px-24 lg:px-32 xl:px-40 2xl:px-52 3xl:px-72'>
               <h1 className='font-medium text-2xl sm:text-3xl lg:text-5xl sm:w-2/3 xl:w-1/2 2xl:text-6xl 3xl:text-7xl'>
                 Transformando desafios em soluções jurídicas.
@@ -66,36 +65,42 @@ export default function LandingPage() {
                 Agendar consulta
               </button>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section>
-            <div className='lg:flex lg:h-screen'>
-              <img src={AlvanyMobile} alt="" className='w-full lg:hidden' />
-              <img src={AlvanyDesktop} alt="" className='w-full hidden lg:block' />
-              <div className='mt-12 lg:h-screen flex flex-col px-12'>
-                <h1 className='text-[color:var(--primary-blue)] text-xl font-bold sm:text-2xl lg:text-4xl' >Sobre</h1>
-                <p className='text-sm mt-2 text-justify sm:text-base lg:text-xl'>
+        <section className='max-h-screen'>
+          <div className='flex flex-col  xl:flex-row'>
+            <img src={AlvanyMobile} alt="" className='w-full xl:hidden' />
+            <img src={AlvanyDesktop} alt="" className='h-screen hidden xl:block' />
+            <div className='px-12 py-6 flex flex-col gap-8 xl:justify-center xl:gap-20 2xl:gap-24 2xl:px-24 3xl:gap-28 3xl:px-32'>
+
+              <div>
+                <h1 className='font-bold text-[color:var(--primary-blue)] text-xl sm:text-2xl lg:text-3xl xl:text-4xl 3xl:text-[40px]'>Sobre</h1>
+                <p className='text-xs text-justify mt-2 sm:text-sm lg:text-lg xl:text-xl 3xl:text-2xl'>
                   Dr. Alvany Figueiredo é graduado em Direito pela Universidade de São Paulo (USP),
                   onde também completou sua especialização em Direito Tributário. Ele é um defensor
-                  da educação contínua, tendo participado de diversos cursos e workshops
-                  relevantes ao longo de sua carreira.
-                </p>
-
-
-
-                <h1 className='text-[color:var(--primary-blue)] text-xl font-bold mt-8' >Experiência Profissional</h1>
-                <p className='text-sm mt-2 text-justify pb-16'>
-                  Com mais de 15 anos de experiência na área jurídica, Dr. Alvany atuou
-                  em renomados escritórios de advocacia e prestou consultoria a empresas
-                  de grande porte. Sua vasta experiência inclui a representação de clientes
-                  em casos complexos, com um histórico de sucesso em litígios e negociação de
-                  contratos.
+                  da educação contínua, tendo participado de diversos cursos e workshops relevantes
+                  ao longo de sua carreira.
                 </p>
               </div>
-            </div>
-          </section>
 
-        </div>
+              <div>
+                <h1 className='font-bold text-[color:var(--primary-blue)] text-xl sm:text-2xl lg:text-3xl xl:text-4xl 3xl:text-[40px]'>Experiência Profissional</h1>
+                <p className='text-xs text-justify mt-2 sm:text-sm lg:text-lg xl:text-xl 3xl:text-2xl'>
+                Com mais de 15 anos de experiência na área jurídica, Dr. Alvany atuou em renomados 
+                escritórios de advocacia e prestou consultoria a empresas de grande porte. Sua vasta
+                 experiência inclui a representação de clientes em casos complexos, com um histórico 
+                 de sucesso em litígios e negociação de contratos.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <section>
+            
+        </section>
       </div>
     </>
   );
