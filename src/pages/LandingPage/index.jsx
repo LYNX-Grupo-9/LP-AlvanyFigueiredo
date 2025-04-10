@@ -3,6 +3,8 @@ import AlvanyMobile from '../../assets/alvany-mobile.png';
 import AlvanyDesktop from '../../assets/alvany-desktop.png';
 import MenuHamburguerImage from '../../assets/menu-hamburguer.png';
 import { useState } from 'react';
+import { X } from 'lucide-react';
+
 
 
 export default function LandingPage() {
@@ -23,7 +25,19 @@ export default function LandingPage() {
         </div>
 
         <div className={`w-2/3 bg-white h-screen fixed transition-all duration-200 ease-in-out translate-x-full  ${isOpen ? 'left-[-33%]' : 'left-full'}`}>
-
+          <div className='w-full flex justify-end'> <X className='m-5 ' size={28} onClick={changeMenuState}/> </div>
+          <ul className='w-full flex flex-col gap-4 px-10 font-semibold text-lg'>
+            <li >HOME</li>
+            <li >SOBRE</li>
+            <li >ÁREAS DE ATUAÇÃO</li>
+            <li >CONTATO</li>
+          </ul>
+          <div className='px-10'>
+            <button className='block px-4 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)] text-base
+             text-white hover:bg-[color:#e49124]' >
+              Agendar consulta
+            </button>
+          </div>
         </div>
 
 
@@ -87,19 +101,19 @@ export default function LandingPage() {
               <div>
                 <h1 className='font-bold text-[color:var(--primary-blue)] text-xl sm:text-2xl lg:text-3xl xl:text-4xl 3xl:text-[40px]'>Experiência Profissional</h1>
                 <p className='text-xs text-justify mt-2 sm:text-sm lg:text-lg xl:text-xl 3xl:text-2xl'>
-                Com mais de 15 anos de experiência na área jurídica, Dr. Alvany atuou em renomados 
-                escritórios de advocacia e prestou consultoria a empresas de grande porte. Sua vasta
-                 experiência inclui a representação de clientes em casos complexos, com um histórico 
-                 de sucesso em litígios e negociação de contratos.
+                  Com mais de 15 anos de experiência na área jurídica, Dr. Alvany atuou em renomados
+                  escritórios de advocacia e prestou consultoria a empresas de grande porte. Sua vasta
+                  experiência inclui a representação de clientes em casos complexos, com um histórico
+                  de sucesso em litígios e negociação de contratos.
                 </p>
               </div>
-              
+
             </div>
           </div>
         </section>
 
         <section>
-            
+
         </section>
       </div>
     </>
