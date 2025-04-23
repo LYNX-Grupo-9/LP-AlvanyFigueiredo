@@ -4,6 +4,7 @@ import AlvanyDesktop from '../../assets/alvany-desktop.png';
 import MenuHamburguerImage from '../../assets/menu-hamburguer.png';
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import { Form } from '../../components/Form';
 
 
 
@@ -25,7 +26,7 @@ export default function LandingPage() {
         </div>
 
         <div className={`w-2/3 bg-white h-screen fixed transition-all duration-200 ease-in-out translate-x-full  ${isOpen ? 'left-[-33%]' : 'left-full'}`}>
-          <div className='w-full flex justify-end'> <X className='m-5 ' size={28} onClick={changeMenuState}/> </div>
+          <div className='w-full flex justify-end'> <X className='m-5 ' size={28} onClick={changeMenuState} /> </div>
           <ul className='w-full flex flex-col gap-4 px-10 font-semibold text-lg'>
             <li >HOME</li>
             <li >SOBRE</li>
@@ -82,7 +83,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className='max-h-screen'>
+        <section className='h-fit'>
           <div className='flex flex-col  xl:flex-row'>
             <img src={AlvanyMobile} alt="" className='w-full xl:hidden' />
             <img src={AlvanyDesktop} alt="" className='h-screen hidden xl:block' />
@@ -112,10 +113,11 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section>
-
+        <section className="bg-gradient-to-b from-[var(--primary-blue)] to-[var(--muted-blue)] w-full h-fit">
+          <h1 className='font-bold text-center text-white text-3xl pt-6'>Entre em contato</h1>
+          <Form />
         </section>
       </div>
     </>
   );
-}
+} 
