@@ -5,7 +5,9 @@ import MenuHamburguerImage from '../../assets/menu-hamburguer.png';
 import { useState } from 'react';
 import { X } from 'lucide-react';
 import { Form } from '../../components/Form';
-
+import IconTelefone from '../../assets/telefone.svg';
+import IconWhatsapp from '../../assets/whatsapp.svg';
+import IconEmail from '../../assets/email.svg';
 
 
 export default function LandingPage() {
@@ -113,9 +115,31 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-[var(--primary-blue)] to-[var(--muted-blue)] w-full h-fit">
+        <section className="bg-gradient-to-b from-[var(--primary-blue)] to-[var(--muted-blue)] w-full h-fit p-7 flex flex-col gap-8 ">
           <h1 className='font-bold text-center text-white text-3xl pt-6'>Entre em contato</h1>
-          <Form />
+          <div className='flex flex-col gap-8 xl:flex-row'>
+            <div className="border-2 border-white rounded-lg py-5 px-6 flex flex-col gap-8 w-full w-sm h-fit">
+              <div className='flex items-center gap-4'>
+                <img src={IconTelefone} alt="" className='w-8' />
+                <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline">
+                  +55 (11) 4779-1228
+                </a>
+              </div>
+              <div className='flex items-center gap-4'>
+                <img src={IconWhatsapp} alt="" className='w-8' />
+                <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline">
+                  +55 (11) 4779-1228
+                </a>
+              </div>
+              <div className='flex items-center gap-4'>
+                <img src={IconEmail} alt="" className='w-8' />
+                <a href="mailto:contato@alvanyfigueiredo.com" className="text-white text-sm font-medium hover:underline">
+                  alvany.email@example.com
+                </a>
+              </div>
+            </div>
+            <Form />
+          </div>
         </section>
       </div>
     </>
