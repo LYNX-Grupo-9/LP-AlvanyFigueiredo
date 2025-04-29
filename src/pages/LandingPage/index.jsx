@@ -1,4 +1,5 @@
 import LogoAF from '../../assets/logo-af-branco.png';
+import LogoAFAzul from '../../assets/logo-blue.svg';
 import AlvanyMobile from '../../assets/alvany-mobile.png';
 import AlvanyDesktop from '../../assets/alvany-desktop.png';
 import MenuHamburguerImage from '../../assets/menu-hamburguer.png';
@@ -115,32 +116,63 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-[var(--primary-blue)] to-[var(--muted-blue)] w-full h-fit p-7 flex flex-col gap-8 ">
-          <h1 className='font-bold text-center text-white text-3xl pt-6'>Entre em contato</h1>
-          <div className='flex flex-col gap-8 xl:flex-row'>
-            <div className="border-2 border-white rounded-lg py-5 px-6 flex flex-col gap-8 w-full w-sm h-fit">
+        <section className="bg-gradient-to-b from-[var(--primary-blue)] to-[var(--muted-blue)] w-full h-fit p-7 flex flex-col gap-8 xl:min-h-screen">
+          <h1 className='font-bold text-center text-white text-3xl pt-6 xl:text-4xl'>Entre em contato</h1>
+          <div className='flex flex-col gap-8 xl:flex-row  xl:justify-around xl:items-center xl:mt-10'>
+            <div className="border-2 border-white rounded-lg py-5 px-6 flex flex-col gap-8 w-full xl:w-sm h-fit" >
               <div className='flex items-center gap-4'>
                 <img src={IconTelefone} alt="" className='w-8' />
-                <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline">
+                <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline xl:text-xl">
                   +55 (11) 4779-1228
                 </a>
               </div>
               <div className='flex items-center gap-4'>
                 <img src={IconWhatsapp} alt="" className='w-8' />
-                <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline">
+                <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline xl:text-xl">
                   +55 (11) 4779-1228
                 </a>
               </div>
               <div className='flex items-center gap-4'>
                 <img src={IconEmail} alt="" className='w-8' />
-                <a href="mailto:contato@alvanyfigueiredo.com" className="text-white text-sm font-medium hover:underline">
+                <a href="mailto:contato@alvanyfigueiredo.com" className="text-white text-sm font-medium hover:underline xl:text-xl">
                   alvany.email@example.com
                 </a>
               </div>
             </div>
-            <Form />
+            <div className='xl:w-1/3'>
+              <Form />
+            </div>
           </div>
         </section>
+
+        <footer className="bg-white w-full p-10">
+          <img src={LogoAFAzul} alt="" />
+          <div className="flex flex-col gap-8 font-semibold mt-3 text-[color:var(--primary-blue)] ">
+            <div>
+              <h1 className="font-bold mb-4">Mapa do site</h1>
+              <ul className="space-y-2">
+                <li className='text-base'>HOME</li>
+                <li className='text-base'>SOBRE</li>
+                <li className='text-base'>ÁREAS DE ATUAÇÃO</li>
+                <li className='text-base'>CONTATOS</li>
+              </ul>
+            </div>
+            <div>
+              <h1 className="font-bold mb-4">Atendimento</h1>
+              <p className='text-base'> De segunda a sábado,</p>
+              <p className='text-base'>das 8h - 15h</p>
+            </div>
+            <div>
+              <h1 className="font-bold mb-4">Endereço</h1>
+              <p className='text-base'>Rua XPTO, 660</p>
+            </div>
+            <div>
+              <h1 className="font-bold mb-4">Informações Legais</h1>
+              <p className='text-base'>CNPJ: XXXXXXXXXXXX</p>
+              <p className='text-base'>OAB: XXXXXXXXXXXX</p>
+            </div>
+          </div>
+        </footer> 
       </div>
     </>
   );

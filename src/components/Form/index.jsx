@@ -43,8 +43,8 @@ export function Form() {
     };
 
     return (
-        <div>
-            <form ref={formRef} onSubmit={handleSubmit} className="border-2 border-white rounded-lg p-5 flex flex-col gap-4 w-full">
+        <div className="w-full">
+            <form ref={formRef} onSubmit={handleSubmit} className="border-2 border-white rounded-lg p-5 flex flex-col gap-4 w-full xl:w-full">
                 <FormInput 
                     label="Nome" 
                     placeholder="Digite seu nome..." 
