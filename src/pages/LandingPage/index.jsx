@@ -9,7 +9,11 @@ import { Form } from '../../components/Form';
 import IconTelefone from '../../assets/telefone.svg';
 import IconWhatsapp from '../../assets/whatsapp.svg';
 import IconEmail from '../../assets/email.svg';
-
+import LinkedinLogo from '../../assets/linkedin-logo.svg';
+import FacebookLogo from '../../assets/facebook-logo.svg';
+import InstagramLogo from '../../assets/instagram-logo.svg';
+import XLogo from '../../assets/x-logo.svg';
+import AreasAtuacaoCarousel from '../../components/AreasCarrousel';
 
 export default function LandingPage() {
 
@@ -116,6 +120,8 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <AreasAtuacaoCarousel />
+
         <section className="bg-gradient-to-b from-[var(--primary-blue)] to-[var(--muted-blue)] w-full h-fit p-7 flex flex-col gap-8 xl:min-h-screen">
           <h1 className='font-bold text-center text-white text-3xl pt-6 xl:text-4xl'>Entre em contato</h1>
           <div className='flex flex-col gap-8 xl:flex-row  xl:justify-around xl:items-center xl:mt-10'>
@@ -147,32 +153,47 @@ export default function LandingPage() {
 
         <footer className="bg-white w-full p-10">
           <img src={LogoAFAzul} alt="" />
-          <div className="flex flex-col gap-8 font-semibold mt-3 text-[color:var(--primary-blue)] ">
-            <div>
-              <h1 className="font-bold mb-4">Mapa do site</h1>
-              <ul className="space-y-2">
-                <li className='text-base'>HOME</li>
-                <li className='text-base'>SOBRE</li>
-                <li className='text-base'>ÁREAS DE ATUAÇÃO</li>
-                <li className='text-base'>CONTATOS</li>
-              </ul>
+          <div className='flex justify-between'>
+            <div className="flex flex-col gap-8 font-semibold mt-3 text-[color:var(--primary-blue)] ">
+              <div>
+                <h1 className="font-bold mb-4">Mapa do site</h1>
+                <ul className="space-y-2">
+                  <li className='text-base'>HOME</li>
+                  <li className='text-base'>SOBRE</li>
+                  <li className='text-base'>ÁREAS DE ATUAÇÃO</li>
+                  <li className='text-base'>CONTATOS</li>
+                </ul>
+              </div>
+              <div>
+                <h1 className="font-bold mb-4">Atendimento</h1>
+                <p className='text-base'> De segunda a sábado,</p>
+                <p className='text-base'>das 8h - 15h</p>
+              </div>
+              <div>
+                <h1 className="font-bold mb-4">Informações Legais</h1>
+                <p className='text-base'>CNPJ: XXXXXXXXXXXX</p>
+                <p className='text-base'>OAB: XXXXXXXXXXXX</p>
+              </div>
             </div>
-            <div>
-              <h1 className="font-bold mb-4">Atendimento</h1>
-              <p className='text-base'> De segunda a sábado,</p>
-              <p className='text-base'>das 8h - 15h</p>
-            </div>
-            <div>
-              <h1 className="font-bold mb-4">Endereço</h1>
-              <p className='text-base'>Rua XPTO, 660</p>
-            </div>
-            <div>
-              <h1 className="font-bold mb-4">Informações Legais</h1>
-              <p className='text-base'>CNPJ: XXXXXXXXXXXX</p>
-              <p className='text-base'>OAB: XXXXXXXXXXXX</p>
+            <div className='mt-3 flex flex-col gap-5'>
+              <a href="linkedin.com.br" tareget="_blank" >
+                <img src={LinkedinLogo} alt="" className='w-10' />
+              </a>
+              <a href="linkedin.com.br" tareget="_blank" >
+                <img src={FacebookLogo} alt="" className='w-10' />
+              </a>
+              <a href="linkedin.com.br" tareget="_blank" >
+                <img src={InstagramLogo} alt="" className='w-10' />
+              </a>
+              <a href="linkedin.com.br" tareget="_blank" >
+                <img src={XLogo} alt="" className='w-10' />
+              </a>
             </div>
           </div>
-        </footer> 
+        </footer>
+        <div className='py-14 text-center text-white bg-[color:var(--primary-blue)] '>
+          <p className='text-xs '>© Figueredo Matos Advogados - todos os direitos reservados </p>
+        </div>
       </div>
     </>
   );
