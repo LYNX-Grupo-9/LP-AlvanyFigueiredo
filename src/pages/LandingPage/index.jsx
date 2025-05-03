@@ -151,10 +151,10 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <footer className="bg-white w-full p-10">
+        <footer className="bg-white w-full p-10 lg:flex lg:items-start lg:gap-7">
           <img src={LogoAFAzul} alt="" />
-          <div className='flex justify-between'>
-            <div className="flex flex-col gap-8 font-semibold mt-3 text-[color:var(--primary-blue)] ">
+          <div className='flex justify-between lg:gap-7 lg:flex-1 lg:justify-around'>
+            <div className="flex flex-col gap-8 font-semibold mt-3 text-[color:var(--primary-blue)] lg:flex-row">
               <div>
                 <h1 className="font-bold mb-4">Mapa do site</h1>
                 <ul className="space-y-2">
@@ -175,7 +175,7 @@ export default function LandingPage() {
                 <p className='text-base'>OAB: XXXXXXXXXXXX</p>
               </div>
             </div>
-            <div className='mt-3 flex flex-col gap-5'>
+            <div className='mt-3 flex flex-col gap-5  sm:flex-row'>
               <a href="linkedin.com.br" tareget="_blank" >
                 <img src={LinkedinLogo} alt="" className='w-10' />
               </a>
