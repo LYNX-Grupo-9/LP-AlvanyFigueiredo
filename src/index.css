@@ -17,12 +17,13 @@ html {
   :root {
     --primary-blue: #013451;  
     --light-blue: #C4E3F7;
-    --accent-yellow: #E89932;
+    --accent-yellow: #E8A532;
     --golden-yellow: #ECBE4F;
     --dark-blue: #011B2B;
     --muted-blue: #3C6A89;
 
     --home-background: url('/src/assets/home-background.png');
+    --agendamento-background: url('/src/assets/agendamento-bg.svg');
     --form-border: url('/src/assets/form-border.svg');
 
     --lexend-font: 'Lexend', sans-serif;
