@@ -14,12 +14,16 @@ import FacebookLogo from '../../assets/facebook-logo.svg';
 import InstagramLogo from '../../assets/instagram-logo.svg';
 import XLogo from '../../assets/x-logo.svg';
 import AreasAtuacaoCarousel from '../../components/AreasCarrousel';
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
 
-
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+  function goToSchedule() {
+    navigate('/agendamento');
+  }
 
   function changeMenuState() {
     setIsOpen(!isOpen);
@@ -41,7 +45,7 @@ export default function LandingPage() {
             <li >CONTATO</li>
           </ul>
           <div className='px-10'>
-            <button className='block px-4 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)] text-base
+            <button onClick={goToSchedule} className='block px-4 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)] text-base
              text-white hover:bg-[color:#e49124]' >
               Agendar consulta
             </button>
@@ -60,7 +64,7 @@ export default function LandingPage() {
               <li className='cursor-pointer hover:opacity-80 duration-200'>CONTATO</li>
             </ul>
 
-            <button className='hidden xl:block px-6 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)]
+            <button onClick={goToSchedule} className='hidden xl:block px-6 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)]
              text-white hover:bg-[color:#e49124] xl:px-8 2xl:text-lg 3xl:text-xl' >
               Agendar consulta
             </button>
@@ -82,7 +86,7 @@ export default function LandingPage() {
                 Oferecendo estratégias personalizadas e expertise jurídica para transformar obstáculos em oportunidades e garantir as melhores soluções para você.
               </p>
 
-              <button className='px-6 py-2 mt-6 text-sm rounded-full bg-[color:var(--accent-yellow)] hover:bg-[color:#e49124] 
+              <button  onClick={goToSchedule}  className='px-6 py-2 mt-6 text-sm rounded-full bg-[color:var(--accent-yellow)] hover:bg-[color:#e49124] 
               self-start max-sm:self-center xl:px-8 2xl:text-lg 3xl-text-xl'>
                 Agendar consulta
               </button>
