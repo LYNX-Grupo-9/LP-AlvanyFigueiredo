@@ -23,10 +23,7 @@ export function Form() {
                 'utjNP4FwYfSEdvHyE' // Substitua pela sua Public Key
             );
             console.log('Mensagem enviada com sucesso:', result.text);
-            toast.success('Mensagem enviada com sucesso!', {
-                position: toast.POSITION.TOP_RIGHT,
-                autoClose: 3000,
-            });
+            toast.success('Mensagem enviada com sucesso!');
             // Limpar os campos do formulário
             setNome("");
             setTelefone("");
@@ -35,10 +32,7 @@ export function Form() {
             setMensagem("");
         } catch (error) {
             console.error('Erro ao enviar mensagem:', error);
-            toast.error('Erro ao enviar mensagem. Tente novamente.', {
-                position: toast.POSITION.TOP_RIGHT,
-                autoClose: 3000,
-            });
+            toast.error('Erro ao enviar mensagem. Tente novamente.');
         }
     };
 
