@@ -2,7 +2,7 @@ import { FormInput } from "../FormInput";
 import { FormTextArea } from "../FormTextarea";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 export function Form() {
     const [nome, setNome] = useState("");
@@ -16,8 +16,14 @@ export function Form() {
         e.preventDefault();
 
         try {
+
+            if (!nome || !telefone || !email || !assunto || !mensagem) {
+                toast.error('Por favor, preencha todos os campos antes de enviar.');
+                return;
+            }
+
             const result = await emailjs.sendForm(
-                'service_6knuzn9', // Substitua pelo seu Service ID
+                'service_0rbaiji', // Substitua pelo seu Service ID
                 'template_b5uzoeq', // Substitua pelo seu Template ID
                 formRef.current,
                 'utjNP4FwYfSEdvHyE' // Substitua pela sua Public Key
@@ -37,53 +43,56 @@ export function Form() {
     };
 
     return (
-        <div className="w-full">
-            <form ref={formRef} onSubmit={handleSubmit} className="border-2 border-white rounded-lg p-5 flex flex-col gap-4 w-full xl:w-full">
-                <FormInput 
-                    label="Nome" 
-                    placeholder="Digite seu nome..." 
-                    name="nome"
-                    value={nome} 
-                    onChange={(e) => setNome(e.target.value)} 
-                />
-                <FormInput 
-                    label="Telefone" 
-                    placeholder="Ex: +55 (11) 97885-2543" 
-                    name="telefone"
-                    value={telefone} 
-                    onChange={(e) => setTelefone(e.target.value)} 
-                />
-                <FormInput 
-                    label="Email" 
-                    placeholder="Ex: email@example.com" 
-                    name="email"
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
-                />
-                <FormInput 
-                    label="Assunto" 
-                    placeholder="Ex: Aposentadoria" 
-                    name="assunto"
-                    value={assunto} 
-                    onChange={(e) => setAssunto(e.target.value)} 
-                />
-                <FormTextArea 
-                    label="Mensagem" 
-                    placeholder="Explique o motivo do contato..." 
-                    rows="6" 
-                    name="mensagem"
-                    value={mensagem} 
-                    onChange={(e) => setMensagem(e.target.value)} 
-                />
+        <>
+            <ToastContainer />
+            <div className="w-full">
+                <form ref={formRef} onSubmit={handleSubmit} className="border-2 border-white rounded-lg p-5 flex flex-col gap-4 w-full xl:w-full">
+                    <FormInput
+                        label="Nome"
+                        placeholder="Digite seu nome..."
+                        name="nome"
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
+                    />
+                    <FormInput
+                        label="Telefone"
+                        placeholder="Ex: +55 (11) 97885-2543"
+                        name="telefone"
+                        value={telefone}
+                        onChange={(e) => setTelefone(e.target.value)}
+                    />
+                    <FormInput
+                        label="Email"
+                        placeholder="Ex: email@example.com"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <FormInput
+                        label="Assunto"
+                        placeholder="Ex: Aposentadoria"
+                        name="assunto"
+                        value={assunto}
+                        onChange={(e) => setAssunto(e.target.value)}
+                    />
+                    <FormTextArea
+                        label="Mensagem"
+                        placeholder="Explique o motivo do contato..."
+                        rows="6"
+                        name="mensagem"
+                        value={mensagem}
+                        onChange={(e) => setMensagem(e.target.value)}
+                    />
 
-                <button 
-                    type="submit" 
-                    onClick={handleSubmit}
-                    className="bg-[color:var(--golden-yellow)] text-white font-bold py-2 px-4 rounded shadow-md hover:bg-[color:var(--accent-yellow)] transition duration-300"
-                >
-                    Enviar Mensagem
-                </button>
-            </form>
-        </div>
+                    <button
+                        type="submit"
+                        onClick={handleSubmit}
+                        className="bg-[color:var(--golden-yellow)] text-white font-bold py-2 px-4 rounded shadow-md hover:bg-[color:var(--accent-yellow)] transition duration-300"
+                    >
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </>
     );
 }

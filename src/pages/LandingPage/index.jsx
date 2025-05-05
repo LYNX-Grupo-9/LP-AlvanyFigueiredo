@@ -129,13 +129,13 @@ export default function LandingPage() {
               <div className='flex items-center gap-4'>
                 <img src={IconTelefone} alt="" className='w-8' />
                 <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline xl:text-xl">
-                  +55 (11) 4779-1228
+                  +351 912 689 331
                 </a>
               </div>
               <div className='flex items-center gap-4'>
                 <img src={IconWhatsapp} alt="" className='w-8' />
                 <a href="tel:+5511999999999" className="text-white text-sm font-medium hover:underline xl:text-xl">
-                  +55 (11) 4779-1228
+                  +351 912 689 331
                 </a>
               </div>
               <div className='flex items-center gap-4'>
@@ -171,8 +171,8 @@ export default function LandingPage() {
               </div>
               <div>
                 <h1 className="font-bold mb-4">Informações Legais</h1>
-                <p className='text-base'>CNPJ: XXXXXXXXXXXX</p>
-                <p className='text-base'>OAB: XXXXXXXXXXXX</p>
+                <p className='text-base'>CNPJ: 29.378.776/0001-21</p>
+                <p className='text-base'>OAB: SP 180.116</p>
               </div>
             </div>
             <div className='mt-3 flex flex-col gap-5  sm:flex-row'>
