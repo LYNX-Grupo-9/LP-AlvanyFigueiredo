@@ -48,8 +48,9 @@ export default function AreasAtuacaoCarousel() {
           centeredSlides={true}
           style={{ paddingBottom: '40px' }}
           breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 1 },
+            320: { slidesPerView: 1.5 },
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 1.5 },
             1024: { slidesPerView: 2 },
             1280: { slidesPerView: 3 },
           }}
@@ -57,7 +58,7 @@ export default function AreasAtuacaoCarousel() {
           {cards.map((card, index) => (
             <SwiperSlide key={index}>
               <div className="rounded-2xl overflow-hidden shadow-md">
-                <div className="relative w-full h-90 sm:h-[34rem]">
+                <div className="relative w-full h-70 sm:h-[34rem]">
                   <img
                     src={card.image}
                     alt={card.title}
@@ -65,7 +66,7 @@ export default function AreasAtuacaoCarousel() {
                   />
                 </div>
                 <div className="bg-black bg-opacity-50 text-white p-4 -mt-16 relative z-10">
-                  <h3 className="text-xl font-bold">{card.title}</h3>
+                  <h3 className="text-[15px] xs:text-[15px] font-bold">{card.title}</h3>
                 </div>
               </div>
             </SwiperSlide>
