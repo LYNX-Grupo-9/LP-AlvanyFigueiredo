@@ -6,43 +6,44 @@ import 'swiper/css';
 const cards = [
   {
     title: 'Direito Previdenciário',
-    image: 'src/assets/direito-previdenciario.svg',
+    image: 'src/assets/1.png',
   },
   {
     title: 'Sucessões',
-    image: 'src/assets/sucessoes.svg',
+    image: 'src/assets/2.png',
   },
   {
     title: 'Direito de Família',
-    image: 'src/assets/direito-familia.svg',
+    image: 'src/assets/3.png',
   },
   {
     title: 'Direito Previdenciário',
-    image: 'src/assets/direito-previdenciario.svg',
+    image: 'src/assets/1.png',
   },
   {
     title: 'Sucessões',
-    image: 'src/assets/sucessoes.svg',
+    image: 'src/assets/2.png',
   },
   {
     title: 'Direito de Família',
-    image: 'src/assets/direito-familia.svg',
+    image: 'src/assets/3.png',
   },
 ];
 
 export default function AreasAtuacaoCarousel() {
   return (
-    <section className="bg-blue-100 py-12 px-4 text-center 2xl:h-screen">
+    <section className="bg-white py-12 px-4 text-center 2xl:h-screen">
       <h2 className="text-3xl font-bold mb-4 mt-[1%]">Áreas de atuação</h2>
       <div className="h-full flex items-center justify-center pt-10 2xl:pt-0">
         <Swiper
           modules={[Autoplay]}
           loop={true}
           autoplay={{
-            delay: 2500,
+            delay: 2600,
             disableOnInteraction: false,
+            
           }}
-          speed={750}
+          speed={760}
           spaceBetween={20}
           slidesPerView={2.5}
           centeredSlides={true}
@@ -51,22 +52,24 @@ export default function AreasAtuacaoCarousel() {
             320: { slidesPerView: 1.5 },
             640: { slidesPerView: 1.5 },
             768: { slidesPerView: 1.5 },
-            1024: { slidesPerView: 2 },
-            1280: { slidesPerView: 3 },
+            1024: { slidesPerView: 1.5 },
+            1280: { slidesPerView: 1.5 },
+            1440: { slidesPerView: 1.5 },
+            1920: { slidesPerView: 2.5 },
           }}
         >
           {cards.map((card, index) => (
             <SwiperSlide key={index}>
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <div className="relative w-full h-70 sm:h-[34rem]">
+              <div className="overflow-hidden">
+                <div className="relative w-full h-[20vh] sm:h-[34rem]">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-contain"
                   />
                 </div>
-                <div className="bg-black bg-opacity-50 text-white p-4 -mt-16 relative z-10">
-                  <h3 className="text-[15px] xs:text-[15px] font-bold">{card.title}</h3>
+                <div className="bg-opacity-50 text-white p-4 -mt-16 relative z-10">
+                  <h3 className="text-[15px] xs:text-[15px] font-bold"></h3>
                 </div>
               </div>
             </SwiperSlide>
