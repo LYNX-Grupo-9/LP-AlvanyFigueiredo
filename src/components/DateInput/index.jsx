@@ -12,7 +12,7 @@ export function DateInput({ selectedDate, onDateChange }) {
   };
 
   return (
-    <div className="flex flex-col gap-1 w-full lg:w-60">
+    <div className="flex flex-col gap-1 w-full lg:min-w-72">
       <label className="text-white text-sm font-medium ml-4">Data</label>
       <div className="flex items-center justify-between bg-white rounded-full px-4 py-2 shadow-sm">
         <DatePicker

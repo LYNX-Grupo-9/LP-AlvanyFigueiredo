@@ -10,6 +10,7 @@ export default function Agendamento() {
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [assunto, setAssunto] = useState('');
+    const [horario, setHorario] = useState('');
     const [dataSolicitacao, setDataSolicitacao] = useState(null);
 
     async function verifyIfExistsScheduled() {
@@ -33,6 +34,7 @@ export default function Agendamento() {
                 telefone,
                 assunto,
                 dataSolicitacao: dataSolicitacao.toISOString().split('T')[0],
+                horaSolicitacao: `${horario}`, 
                 idAdvogado: 1
             };
 
@@ -63,6 +65,49 @@ export default function Agendamento() {
 
 
     }
+
+    const hoursOpitions = [
+        {
+            value: '09:00:00',
+            label: '09:00'
+        },
+        {
+            value: '10:00:00',
+            label: '10:00'
+        },
+        {
+            value: '11:00:00',
+            label: '11:00'
+        },
+        {
+            value: '12:00:00',
+            label: '12:00'
+        },
+        {
+            value: '13:00:00',
+            label: '13:00'
+        },
+        {
+            value: '14:00:00',
+            label: '14:00'
+        },
+        {
+            value: '15:00:00',
+            label: '15:00'
+        },
+        {
+            value: '16:00:00',
+            label: '16:00'
+        },
+        {
+            value: '17:00:00',
+            label: '17:00'
+        },
+        {
+            value: '18:00:00',
+            label: '18:00'
+        }
+    ]
 
     return (
         <>
@@ -104,10 +149,17 @@ export default function Agendamento() {
                                     selectedDate={dataSolicitacao}
                                     onDateChange={(date) => setDataSolicitacao(date)}
                                 />
-                                <button type='submit' onClick={handleSubmit} className='block px-4 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)] text-base text-white hover:bg-[color:#e49124] w-full' >
-                                    Agendar consulta
-                                </button>
+                                <SchedulingInput
+                                    isSelect={true}
+                                    label="Horário"
+                                    value={horario}
+                                    options={hoursOpitions}
+                                    onChange={(e) => setHorario(e.target.value)}
+                                />
                             </div>
+                            <button type='submit' onClick={handleSubmit} className='block px-4 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)] text-base text-white hover:bg-[color:#e49124] w-full' >
+                                Agendar consulta
+                            </button>
                         </form>
                         <div className='hidden lg:flex lg:w-2/6 ' >
                             <img src={SideImg} alt="" className='hidden lg:block ' />;
