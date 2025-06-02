@@ -33,7 +33,7 @@ const cards = [
 export default function AreasAtuacaoCarousel() {
   return (
     <section className="bg-white py-12 px-4 text-center 2xl:h-screen">
-      <h2 className="text-3xl font-bold mb-4 mt-[1%]">Áreas de atuação</h2>
+      <h2 className="sm:text-3xl xs:text-[20px] font-bold mb-4 mt-[1%]">Áreas de atuação</h2>
       <div className="h-full flex items-center justify-center pt-10 2xl:pt-0">
         <Swiper
           modules={[Autoplay]}
@@ -61,7 +61,7 @@ export default function AreasAtuacaoCarousel() {
           {cards.map((card, index) => (
             <SwiperSlide key={index}>
               <div className="overflow-hidden">
-                <div className="relative w-full h-[20vh] sm:h-[34rem]">
+                <div className="relative w-full h-[20vh] sm:h-[34rem] sm:-mt-[10vh]">
                   <img
                     src={card.image}
                     alt={card.title}
