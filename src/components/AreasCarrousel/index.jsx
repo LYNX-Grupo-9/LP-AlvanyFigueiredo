@@ -43,7 +43,7 @@ export default function AreasAtuacaoCarousel() {
             disableOnInteraction: false,
             
           }}
-          speed={760}
+          speed={700}
           spaceBetween={20}
           slidesPerView={2.5}
           centeredSlides={true}
