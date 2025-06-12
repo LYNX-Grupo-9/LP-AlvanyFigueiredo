@@ -22,19 +22,17 @@ export default function Agendamento() {
 
         if (!nome || !email || !telefone || !assunto || !dataSolicitacao) {
             toast.error('Por favor, preencha todos os campos antes de agendar.');
-
             return;
         }
 
         try {
-
             const data = {
                 nome,
                 email,
                 telefone,
                 assunto,
                 dataSolicitacao: dataSolicitacao.toISOString().split('T')[0],
-                horaSolicitacao: `${horario}`, 
+                horaSolicitacao: `${horario}`,
                 idAdvogado: 1
             };
 
@@ -54,59 +52,26 @@ export default function Agendamento() {
                 setAssunto('');
                 setDataSolicitacao(null);
             } else {
-                toast.error(responseData.message || 'Erro ao agendar consulta. Tente novamente.');
+                toast.error('Erro ao agendar consulta. Tente novamente.');
             }
 
         } catch (error) {
             console.error('Erro ao agendar consulta:', error);
             toast.error('Ocorreu um erro ao agendar a consulta. Tente novamente mais tarde.');
         }
-
-
-
     }
 
     const hoursOpitions = [
-        {
-            value: '09:00:00',
-            label: '09:00'
-        },
-        {
-            value: '10:00:00',
-            label: '10:00'
-        },
-        {
-            value: '11:00:00',
-            label: '11:00'
-        },
-        {
-            value: '12:00:00',
-            label: '12:00'
-        },
-        {
-            value: '13:00:00',
-            label: '13:00'
-        },
-        {
-            value: '14:00:00',
-            label: '14:00'
-        },
-        {
-            value: '15:00:00',
-            label: '15:00'
-        },
-        {
-            value: '16:00:00',
-            label: '16:00'
-        },
-        {
-            value: '17:00:00',
-            label: '17:00'
-        },
-        {
-            value: '18:00:00',
-            label: '18:00'
-        }
+        { value: '09:00:00', label: '09:00' },
+        { value: '10:00:00', label: '10:00' },
+        { value: '11:00:00', label: '11:00' },
+        { value: '12:00:00', label: '12:00' },
+        { value: '13:00:00', label: '13:00' },
+        { value: '14:00:00', label: '14:00' },
+        { value: '15:00:00', label: '15:00' },
+        { value: '16:00:00', label: '16:00' },
+        { value: '17:00:00', label: '17:00' },
+        { value: '18:00:00', label: '18:00' }
     ]
 
     return (
@@ -133,10 +98,11 @@ export default function Agendamento() {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <SchedulingInput
+                                isPhone={true}
                                 placeholder="Ex: +55 (11) 91234-5678"
                                 label="Telefone"
                                 value={telefone}
-                                onChange={(e) => setTelefone(e.target.value)}
+                                onChange={setTelefone}
                             />
                             <SchedulingInput
                                 placeholder="Ex: Divórcio..."
