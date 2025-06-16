@@ -13,10 +13,6 @@ export default function Agendamento() {
     const [horario, setHorario] = useState('');
     const [dataSolicitacao, setDataSolicitacao] = useState(null);
 
-    async function verifyIfExistsScheduled() {
-
-    }
-
     async function handleSubmit(event) {
         event.preventDefault();
 
@@ -81,7 +77,7 @@ export default function Agendamento() {
 
                 <img src={LogoAF} alt="" className='w-20 ml-5' />
 
-                <div className='bg-white/10 border border-white/50 backdrop-blur-md max-h-fit rounded-[30px] p-8 m-5 md:m-25 lg:mx-40 lg:my-10 2xl:mx-60 3xl:mx-80'>
+                <div className='bg-white/10 border border-white/50 backdrop-blur-md max-h-fit rounded-[30px] p-8 m-5 md:m-25 lg:mx-40 lg:my-1 2xl:mx-60 3xl:mx-80'>
                     <div className='lg:flex lg:items-center lg:gap-10'>
                         <form className='flex flex-col gap-4 lg:flex-1 h-fit'>
                             <h1 className='text-white text-center mb-7 text-xl lg:text-3xl'>Agende uma consulta!</h1>

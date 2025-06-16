@@ -11,10 +11,23 @@ export function SchedulingInput({
   options = [],
   ...props
 }) {
+
+  const divStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderRadius: '9999px',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    paddingTop: isPhone ? '0px' : '0.5rem',
+    paddingBottom: isPhone ? '0px' : '0.5rem',
+    boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
+  }
+
   return (
     <div className="flex flex-col gap-1 w-full">
       <label className="text-white text-sm font-medium ml-4">{label}</label>
-      <div className="flex items-center bg-white rounded-full px-4 py-2 shadow-sm">
+      <div style={divStyle}>
         {isSelect ? (
           <select
             {...props}
@@ -38,7 +51,8 @@ export function SchedulingInput({
             inputStyle={{
               width: '100%',
               borderRadius: '9999px',
-              border: 'none'
+              border: 'none',
+              padding: '0px 2.5rem',
             }}
             buttonStyle={{
               border: 'none',
