@@ -29,7 +29,7 @@ export default function Agendamento() {
                 assunto,
                 dataSolicitacao: dataSolicitacao.toISOString().split('T')[0],
                 horaSolicitacao: `${horario}`,
-                idAdvogado: 1
+                idAdvogado: 2
             };
 
             const response = await fetch('http://localhost:8080/api/solicitacao-agendamento/solicitar', {
