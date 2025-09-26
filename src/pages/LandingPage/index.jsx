@@ -47,7 +47,7 @@ export default function LandingPage() {
           <div className='px-10'>
             <button onClick={goToSchedule} className='block px-4 py-2 mt-6 rounded-full bg-[color:var(--accent-yellow)] text-base
              text-white hover:bg-[color:#e49124]' >
-              Agendar consulta
+              Agendar consulta 
             </button>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function LandingPage() {
           <div className='h-5/6 flex flex-col justify-center sm:items-start '>
             <div className='text-white px-12 flex flex-col sm:px-16 md:px-24 lg:px-32 xl:px-40 2xl:px-52 3xl:px-72'>
               <h1 className='font-medium text-2xl sm:text-3xl lg:text-5xl sm:w-2/3 xl:w-1/2 2xl:text-6xl 3xl:text-7xl'>
-                Transformando desafios em soluções jurídicas.
+                Transformando desafios em soluções jurídicas. (Página 02 )
               </h1>
 
               <p className='text-xs font-medium mt-6 sm:text-sm lg:text-xl sm:w-2/3 3xl:text-2xl'>
