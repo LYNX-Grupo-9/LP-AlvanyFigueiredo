@@ -12,6 +12,7 @@ export default function Agendamento() {
     const [assunto, setAssunto] = useState('');
     const [horario, setHorario] = useState('');
     const [dataSolicitacao, setDataSolicitacao] = useState(null);
+    const idAdvogado = import.meta.env.VITE_ADV_ID;
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -29,7 +30,7 @@ export default function Agendamento() {
                 assunto,
                 dataSolicitacao: dataSolicitacao.toISOString().split('T')[0],
                 horaSolicitacao: `${horario}`,
-                idAdvogado: 2
+                idAdvogado
             };
 
             const response = await fetch('http://localhost:8080/api/solicitacao-agendamento/solicitar', {
@@ -124,7 +125,7 @@ export default function Agendamento() {
                             </button>
                         </form>
                         <div className='hidden lg:flex lg:w-2/6 ' >
-                            <img src={SideImg} alt="" className='hidden lg:block ' />;
+                            <img src={SideImg} alt="" className='hidden lg:block ' />
                         </div>
                     </div>
                 </div>
