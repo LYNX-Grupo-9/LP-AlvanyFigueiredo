@@ -32,9 +32,9 @@ const cards = [
 
 export default function AreasAtuacaoCarousel() {
   return (
-    <section className="bg-white py-12 px-4 text-center 2xl:h-screen">
-      <h2 className="sm:text-3xl xs:text-[20px] font-bold mb-4 mt-[1%]">Áreas de atuação</h2>
-      <div className="h-full flex items-center justify-center pt-10 2xl:pt-0">
+    <section className="bg-white py-50 px-4 text-center 2xl:h-screen">
+      <span className="sm:text-3xl xs:text-[20px] font-bold mt-[30%]">Áreas de atuação</span>
+      <div className="h-full flex items-center justify-center pt-[-5%] 2xl:pt-0">
         <Swiper
           modules={[Autoplay]}
           loop={true}

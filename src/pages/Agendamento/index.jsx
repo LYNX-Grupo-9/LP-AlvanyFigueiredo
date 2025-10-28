@@ -4,6 +4,7 @@ import { SchedulingInput } from '../../components/SchedulingInput'
 import SideImg from '../../assets/agendamento-img.png'
 import { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import {solicitarAgendamento} from '../../service/api'; 
 
 export default function Agendamento() {
     const [nome, setNome] = useState('');
@@ -33,13 +34,7 @@ export default function Agendamento() {
                 idAdvogado
             };
 
-            const response = await fetch('http://localhost:8080/api/solicitacao-agendamento/solicitar', {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                method: 'POST',
-                body: JSON.stringify(data)
-            })
+            const response = solicitarAgendamento(data);
 
             if (response.ok) {
                 toast.success('Consulta agendada com sucesso!');
