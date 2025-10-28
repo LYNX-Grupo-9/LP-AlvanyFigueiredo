@@ -34,9 +34,9 @@ export default function Agendamento() {
                 idAdvogado
             };
 
-            const response = solicitarAgendamento(data);
+            const response = await solicitarAgendamento(data);
 
-            if (response.ok) {
+            if (response.status === 200) {
                 toast.success('Consulta agendada com sucesso!');
                 setNome('');
                 setEmail('');
