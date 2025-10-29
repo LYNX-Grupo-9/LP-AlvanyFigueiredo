@@ -5,6 +5,7 @@ import SideImg from '../../assets/agendamento-img.png'
 import { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import {solicitarAgendamento} from '../../service/api'; 
+import { idAdvogado } from '../../service/config';
 
 export default function Agendamento() {
     const [nome, setNome] = useState('');
@@ -13,7 +14,7 @@ export default function Agendamento() {
     const [assunto, setAssunto] = useState('');
     const [horario, setHorario] = useState('');
     const [dataSolicitacao, setDataSolicitacao] = useState(null);
-    const idAdvogado = import.meta.env.VITE_ADV_ID;
+
 
     async function handleSubmit(event) {
         event.preventDefault();
