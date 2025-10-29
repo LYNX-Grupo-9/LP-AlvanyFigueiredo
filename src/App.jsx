@@ -5,7 +5,7 @@ import Agendamento from "./pages/Agendamento";
 
 export default function App() {
   return (
-    <Router> 
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/agendamento" element={<Agendamento />} />
